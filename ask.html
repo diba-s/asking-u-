@@ -1,0 +1,85 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Someone Out</title>
+    <style>
+        body {
+            font-family: Comic Sans MS;
+            background-color: pink;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+        }
+
+        #buttons-container {
+            margin-top: 20px;
+            position: relative;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;  
+            color: white;
+            border: none;
+            border-radius: 5px; 
+            background-color: #E37383;
+        }
+
+        h1 {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Do you wanna go out with me?</h1>
+        <img id="gif" src="https://media.tenor.com/hz6bZYIz1YgAAAAj/cute.gif" alt="Animated GIF">
+        <div id="buttons-container">
+            <button id="yesButton" onclick="handleResponse('yes')">Yes</button>
+            <button id="noButton" onclick="moveButton()">No</button>
+        </div>
+    </div>
+
+    <script>
+        let noButton = document.getElementById('noButton');
+
+        function handleResponse(response) {
+            if (response === 'yes') {
+                // Redirect to a different website
+                window.location.href = 'file:///C:/Users/Diba%20Shaikh/Downloads/yas.html'; // Replace with the desired URL
+            } else if (response === 'no') {
+                moveButton();
+            }
+        }
+
+        function moveButton() {
+            let maxX = window.innerWidth - noButton.clientWidth;
+            let maxY = window.innerHeight - noButton.clientHeight;
+
+           let randomX = Math.random() * 200 - 100; // Random value between -100 and 100 (10cm in either direction)
+let randomY = Math.random() * 200 - 100; // Random value between -100 and 100 (10cm in either direction)
+
+
+            let newX = Math.max(0, Math.min(maxX, noButton.offsetLeft + randomX));
+            let newY = Math.max(0, Math.min(maxY, noButton.offsetTop + randomY));
+
+            noButton.style.transform = `translate(${newX}px, ${newY}px)`;
+        }
+    </script>
+</body>
+</html>
