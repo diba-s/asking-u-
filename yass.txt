@@ -1,0 +1,37 @@
+<!-- yey.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeyyyyyyy!!</title>
+    <style>
+        body {
+            font-family: Comic Sans MS;
+            background-color: pink;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        img {
+            width: 100%; /* Adjust the width as needed */
+            max-width: 400px; /* Set a maximum width for the GIF */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 align="center">Yeeeeeyyyyy!!</h1>
+        <img src="https://64.media.tumblr.com/ccb85e5d4d26217eaeb321fc29977d43/tumblr_o4erp0hrJ41u8eo0po1_500.gif" alt="Yey GIF">
+    </div>
+</body>
+</html>
